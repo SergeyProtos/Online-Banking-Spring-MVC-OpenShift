@@ -1,0 +1,20 @@
+body {
+    background-image: url("https://www.fbi.gov/image-repository/istock_000003139083_medium.jpg/@@images/image/high")
+}
+
+.title {
+    color: white;
+}
+
+.message {
+    color: #cc0000;
+}
+
+form {
+    opacity: 0.95;
+}
+
+fieldset {
+    width: 300px;
+    background-color: #f5f5f0;
+}
