@@ -50,7 +50,6 @@ public class AppConfig extends WebMvcConfigurerAdapter {
         adapter.setShowSql(true);
         adapter.setGenerateDdl(true);
         adapter.setDatabasePlatform("org.hibernate.dialect.MySQLDialect");
-
         return adapter;
     }
 
@@ -58,9 +57,9 @@ public class AppConfig extends WebMvcConfigurerAdapter {
     public DataSource dataSource() {
         DriverManagerDataSource ds = new DriverManagerDataSource();
         ds.setDriverClassName("com.mysql.jdbc.Driver");
-        ds.setUrl("jdbc:mysql://openshift-mysql:3306/openshiftdb?autoReconnect=true&useSSL=false");
-        ds.setUsername("user");
-        ds.setPassword("password");
+        ds.setUrl("jdbc:mysql://openshift-mysql:3306/mydb?autoReconnect=true&useSSL=false");
+        ds.setUsername("sergey");
+        ds.setPassword("openshift2018");
 //        ds.setDriverClassName("com.mysql.jdbc.Driver");
 //        ds.setUrl("jdbc:mysql://localhost:3306/mydb?autoReconnect=true&useSSL=false");
 //        ds.setUsername("sergey");
