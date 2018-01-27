@@ -1,7 +1,6 @@
 package MyApp.dao;
 
 import MyApp.model.Account;
-
 import java.util.List;
 
 public interface AccountDAO {

@@ -51,12 +51,12 @@ public class LoginController {
             model.addAttribute("status", 1);
             model.addAttribute("login", login);
             model.addAttribute("accounts", bankService.findAccountsByLogin(login));
-            model.addAttribute("totalAmount", bankService.totalAmount(login));
+            model.addAttribute("isAccounts", bankService.isAccounts(login));
             model.addAttribute("deposits", bankService.findDepositsByLogin(login));
+            model.addAttribute("isDeposits", bankService.isDeposits(login));
             model.addAttribute("credits", bankService.findCreditsByLogin(login));
+            model.addAttribute("isCredits", bankService.isCredits(login));
             model.addAttribute("events", eventDAO.findEventsByLogin(login));
-            model.addAttribute("usd", bankService.getUsd());
-            model.addAttribute("eur", bankService.getEur());
         }
         return result;
     }
@@ -84,18 +84,18 @@ public class LoginController {
         }
         // if login exists,
         if (loginExist) {
-            result = "index";
+            result = "sign-up";
             model.addAttribute("message", "Assigned login already exists. Please choose another login.");
         }
         // if login exists and passwords doesn't match
         if (!loginExist && !passwordsMatch) {
             model.addAttribute("message", "Passwords don't match. Please enter matching passwords.");
-            result = "index";
+            result = "sign-up";
         }
         // if login isn't exists and empty fields presents
         if (!loginExist && !noEmptyFields) {
             model.addAttribute("message", "You left empty fields. Please fill up obligatory fields.");
-            result = "index";
+            result = "sign-up";
         }
 
         if (!loginExist && passwordsMatch && noEmptyFields) {
@@ -106,12 +106,12 @@ public class LoginController {
             model.addAttribute("status", 1);
             model.addAttribute("login", login);
             model.addAttribute("accounts", bankService.findAccountsByLogin(login));
-            model.addAttribute("totalAmount", bankService.totalAmount(login));
+            model.addAttribute("isAccounts", bankService.isAccounts(login));
             model.addAttribute("deposits", bankService.findDepositsByLogin(login));
+            model.addAttribute("isDeposits", bankService.isDeposits(login));
             model.addAttribute("credits", bankService.findCreditsByLogin(login));
+            model.addAttribute("isCredits", bankService.isCredits(login));
             model.addAttribute("events", eventDAO.findEventsByLogin(login));
-            model.addAttribute("usd", bankService.getUsd());
-            model.addAttribute("eur", bankService.getEur());
             result = "main";
         }
         return result;

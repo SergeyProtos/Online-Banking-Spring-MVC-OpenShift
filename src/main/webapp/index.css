@@ -1,5 +1,7 @@
 body {
-    background-image: url("https://www.fbi.gov/image-repository/istock_000003139083_medium.jpg/@@images/image/high")
+    background-image: url("https://st3.depositphotos.com/1152339/13843/i/1600/depositphotos_138437196-stock-photo-currency-concept-internet-banking-on.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
 .title {
@@ -7,14 +9,19 @@ body {
 }
 
 .message {
-    color: #cc0000;
+    color: red;
 }
 
-form {
+#form {
+    position: fixed;
+    top: 22%;
+    left: 38%;
     opacity: 0.95;
 }
 
 fieldset {
     width: 300px;
     background-color: #f5f5f0;
+    border: solid gray 1px;
+    border-radius: 10px;
 }

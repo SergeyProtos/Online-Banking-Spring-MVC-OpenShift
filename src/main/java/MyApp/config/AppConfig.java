@@ -56,14 +56,14 @@ public class AppConfig extends WebMvcConfigurerAdapter {
     @Bean
     public DataSource dataSource() {
         DriverManagerDataSource ds = new DriverManagerDataSource();
-        ds.setDriverClassName("com.mysql.jdbc.Driver");
-        ds.setUrl("jdbc:mysql://openshift-mysql:3306/mydb?autoReconnect=true&useSSL=false");
-        ds.setUsername("sergey");
-        ds.setPassword("openshift2018");
 //        ds.setDriverClassName("com.mysql.jdbc.Driver");
-//        ds.setUrl("jdbc:mysql://localhost:3306/mydb?autoReconnect=true&useSSL=false");
+//        ds.setUrl("jdbc:mysql://openshift-mysql:3306/mydb?autoReconnect=true&useSSL=false");
 //        ds.setUsername("sergey");
-//        ds.setPassword("mysql2017");
+//        ds.setPassword("openshift2018");
+        ds.setDriverClassName("com.mysql.jdbc.Driver");
+        ds.setUrl("jdbc:mysql://localhost:3306/mydb?autoReconnect=true&useSSL=false");
+        ds.setUsername("sergey");
+        ds.setPassword("mysql2017");
         return ds;
     }
 

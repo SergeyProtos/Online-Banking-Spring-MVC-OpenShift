@@ -16,7 +16,7 @@ public class CreateDefaultCustomer {
     @PostConstruct
     public void createDefaultUser() {
         Customer defaultCustomer = new Customer("user", "user", "user",
-                "user", "user", "user");
+                "user", "user@gmail.com", "+038-000-111-22-33");
         bankService.addCustomer(defaultCustomer);
     }
-    }
+}

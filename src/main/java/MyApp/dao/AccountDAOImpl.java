@@ -3,7 +3,6 @@ package MyApp.dao;
 import MyApp.model.Account;
 import MyApp.model.Customer;
 import org.springframework.stereotype.Repository;
-
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.PersistenceContextType;
@@ -29,7 +28,7 @@ public class AccountDAOImpl implements AccountDAO {
     }
 
     @Override
-    public void closeAccount (int accountID, String login){
+    public void closeAccount(int accountID, String login) {
         Account account = entityManager.getReference(Account.class, accountID);
         TypedQuery<Customer> query = entityManager.createQuery("SELECT c FROM Customer c WHERE c.login =:login",
                 Customer.class);
@@ -45,9 +44,9 @@ public class AccountDAOImpl implements AccountDAO {
         List<Account> accounts = null;
         TypedQuery<Customer> query = entityManager.createQuery("SELECT c FROM Customer c", Customer.class);
         List<Customer> customers = query.getResultList();
-        for (Customer customer : customers) {
-            String customerLogin = customer.getLogin();
-            if (customerLogin.equals(login)) {
+            for (Customer customer : customers) {
+            String loginToCheck = customer.getLogin();
+            if (loginToCheck.equals(login)) {
                 accounts = customer.getAccounts();
             }
         }

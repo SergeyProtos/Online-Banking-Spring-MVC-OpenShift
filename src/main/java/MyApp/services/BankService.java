@@ -19,25 +19,25 @@ public interface BankService {
     Account findAccountByID(int accountID);
     void addFundsOnAccount(int accountID, double amount);
     void transferFunds(int accountFrom, int accountTo, double amount);
-    double totalAmount(String login);
+    boolean isAccounts(String login);
 
     void openDeposit(Deposit deposit, String login);
     List <Deposit> findDepositsByLogin(String login);
     void closeDeposit(int id, String login);
     double depositInterestCalculation(int id, String login);
+    boolean isDeposits(String login);
 
     void getCredit(Credit credit, String login);
     List <Credit> findCreditsByLogin(String login);
     void closeCredit(int id, String login);
     void repayCredit(String login, int creditID, int accountID, double amount);
     double creditInterestCalculation(int id, String login);
+    boolean isCredits(String login);
 
     void setInterestRatesOnDeposits();
     void setInterestRatesOnCredits();
     double findInterestRateOnDeposit(double currency, int term);
     double findInterestRateOnCredit(double currency, int term);
 
-    void setCourses();
-    double getUsd();
-    double getEur();
+    boolean isDouble(String string);
 }

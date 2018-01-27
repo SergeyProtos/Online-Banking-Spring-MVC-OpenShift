@@ -1,5 +1,5 @@
 body {
-    background-image: url("http://www.powerpointhintergrund.com/uploads/2017/09/35-white-paper-textures-hq-paper-textures-freecreatives-16.jpeg");
+    background-color: #f5f5f0;
     z-index: 1;
 }
 
@@ -12,12 +12,16 @@ body {
 }
 
 .message-ok {
-    color: #008000;
+    color: green;
 }
 
 .sum {
     color: darkblue;
     font-style: italic;
+}
+
+.no-data {
+    color: red;
 }
 
 table {
@@ -30,10 +34,8 @@ tr, td {
     vertical-align: middle;
 }
 
-#pop-up-open-account, #pop-up-close-account,
-#pop-up-add-funds, #pop-up-transfer-funds,
-#pop-up-open-deposit, #pop-up-close-deposit,
-#pop-up-get-credit, #pop-up-close-credit {
+#pop-up-open-account, #pop-up-close-account, #pop-up-add-funds, #pop-up-withdraw-cash, #pop-up-transfer-funds,
+#pop-up-open-deposit, #pop-up-close-deposit, #pop-up-get-credit, #pop-up-close-credit {
     position: fixed;
     display: inline-block;
     background: lightgray;
